@@ -16,7 +16,7 @@ module.exports = function(grunt) {
 
 	grunt.registerMultiTask('doxx', 'Generate your docs with Doxx.', function() {
                 var done = this.async();
-		var pluginPath = path.resolve(__dirname, '../'),
+		var pluginPath = path.resolve(__dirname, '../../../'),
 			src = this.data.src,
 			target = this.data.target,
 			_opts = this.options(),
