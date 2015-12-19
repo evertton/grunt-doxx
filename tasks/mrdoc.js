@@ -25,6 +25,12 @@ module.exports = function(grunt) {
 			_args.push(arg1);
 			_args.push(arg2);
 		};
+		
+		// Make sure we are on the right path
+		if(pluginPath.indexOf("node_modules") > -1)
+		{
+			pluginPath = pluginPath.substring(0, pluginPath.indexOf("node_modules"));
+		}
 
 		var formatter = [pluginPath, 'node_modules', '.bin', 'mr-doc'].join(path.sep);
 
